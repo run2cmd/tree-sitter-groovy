@@ -45,10 +45,6 @@
 ((identifier) @keyword
   (#any-of? @keyword
     "static"
-    "abstract"
-    "protected"
-    "private"
-    "public"
     "class"
     "def"
     "import"
@@ -59,6 +55,14 @@
     "instanceof"
     "interface"
     "new"
+))
+
+((identifier) @type.qualifier
+  (#any-of? @type.qualifier
+    "abstract"
+    "protected"
+    "private"
+    "public"
 ))
 
 ((identifier) @exception
